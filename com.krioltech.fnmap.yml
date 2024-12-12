@@ -1,6 +1,6 @@
 app-id: com.krioltech.fnmap
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 command: fnmap
 separate-locales: false
@@ -10,7 +10,11 @@ finish-args:
   - --socket=wayland
   - --device=dri
   - --share=network
+  - --filesystem=xdg-documents
 rename-desktop-file: fnmap.desktop
+#rename-icon: fnmap
+#copy-icon: true
+#rename-appdata-file: fnmap.appdata.xml
 
 modules:
   - buildsystem: autotools
@@ -31,8 +35,8 @@ modules:
       - install -Dm644 fnmap-archive/icons/fnmap.png /app/share/icons/hicolor/512x512/apps/com.krioltech.fnmap.png
     sources:
       - type: archive
-        url: https://github.com/gmckesey/fnmap-flatpak/raw/v1.2.1-3/archives/fnmap-1.2.1-3.x64.tar.gz
-        sha256: 311fca52c5025159c9812beae82590523a26a2f1b7f1f9cb67ab501e5637b92d
+        url: https://github.com/gmckesey/fnmap-flatpak/raw/refs/tags/v1.3.2-2/archives/fnmap-1.3.2-2.x64.tar.gz
+        sha256: 33ec14bdda07d1cb661641179b7b32ccaceb4c1bc4efa11cefb8d2282571c051
         dest: "fnmap-archive"
 
 
